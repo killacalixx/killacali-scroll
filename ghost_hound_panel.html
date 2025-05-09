@@ -1,0 +1,78 @@
+
+<div style="background-color: black; padding: 40px; color: white; font-family: 'Courier New', monospace;">
+  <style>
+    .glitch {
+      position: relative;
+      color: #0ff;
+      font-size: 24px;
+      animation: flicker 2s infinite;
+      text-shadow: 0 0 5px #0ff, 0 0 10px #0ff;
+    }
+
+    @keyframes flicker {
+      0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        opacity: 1;
+        text-shadow: 0 0 5px #0ff, 0 0 10px #0ff;
+      }
+      20%, 24%, 55% {
+        opacity: 0.2;
+        text-shadow: none;
+      }
+    }
+
+    .tv-frame {
+      position: relative;
+      background: #222;
+      border: 4px solid #0ff;
+      padding: 20px;
+      margin-top: 20px;
+      font-size: 14px;
+      animation: screenGlitch 3s infinite;
+    }
+
+    @keyframes screenGlitch {
+      0% { transform: scale(1); opacity: 1; }
+      20% { transform: scale(1.01); opacity: 0.95; }
+      40% { transform: scale(0.99); opacity: 1; }
+      60% { transform: scale(1.02); opacity: 0.9; }
+      80% { transform: scale(1); opacity: 1; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    .audio-hover {
+      color: #0ff;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+    .audio-hover:hover::after {
+      content: " *audio flickers*";
+      font-style: italic;
+      color: #aaa;
+      padding-left: 5px;
+    }
+
+    .sigil {
+      margin-top: 20px;
+      font-size: 16px;
+      color: #555;
+    }
+
+    .sigil:hover {
+      color: #f0f;
+      text-shadow: 0 0 10px #f0f;
+    }
+  </style>
+
+  <h2 class="glitch">Ghost Hound — The Street Prophet</h2>
+  <p><em>“I was never lost. I just refused to follow.”</em></p>
+
+  <div class="tv-frame">
+    <p><strong>[TV Broadcast]</strong></p>
+    <p>"Julian Cross... offers redemption..." *static*</p>
+    <p>"...You can be saved, seen, sold..."</p>
+    <p class="audio-hover">[Unsigned Contract on the Ground]</p>
+  </div>
+
+  <p class="sigil">A faint sigil glows on his back...</p>
+</div>
